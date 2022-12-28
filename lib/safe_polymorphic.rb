@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "safe_polymorphic/version"
+require_relative 'safe_polymorphic/version'
 
 module SafePolymorphic
   class Error < StandardError; end
