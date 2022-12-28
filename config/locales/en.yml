@@ -1,0 +1,5 @@
+en:
+  safe_polymorphic:
+    errors:
+      messages:
+        class_not_allowed: "%{class} is not an allowed class"
