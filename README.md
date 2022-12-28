@@ -36,6 +36,14 @@ If we try to set an `owner` from a class rather than the aforementioend ones, it
 #ActiveRecord::RecordInvalid: Validation failed: Owner type OtherThing class is not an allowed class.
 ```
 
+We can also use strings and symbols instead of the classes themselves:
+```ruby
+class Book < ActiveRecord::Base
+    belongs_to :owner, polymorphic: [:user, 'Publisher']
+end
+```
+Provided that the strings and symbols translate to existing classes when used with `.classify.constantize`.
+
 ### Usage with namespaced models
 
 ```ruby

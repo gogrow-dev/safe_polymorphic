@@ -23,5 +23,10 @@ ActiveRecord::Schema.define do
     t.timestamps
   end
 
-  create_table :other_things, force: true, &:timestamps
+  create_table :other_things, force: true do |t|
+    t.integer :thing_id
+    t.string :thing_type
+
+    t.timestamps
+  end
 end
