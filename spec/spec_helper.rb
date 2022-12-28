@@ -1,18 +1,19 @@
 # frozen_string_literal: true
 
-require 'safe_polymorphic'
 require 'simplecov'
 require 'active_record'
 require 'database_cleaner/active_record'
 
 ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: ':memory:'
 
-load "#{File.dirname(__FILE__)}/support/schema.rb"
-require "#{File.dirname(__FILE__)}/support/models.rb"
-
 SimpleCov.start do
+  track_files '/lib/**/*.rb'
   add_filter '/spec/'
 end
+
+require 'safe_polymorphic'
+load "#{File.dirname(__FILE__)}/support/schema.rb"
+require "#{File.dirname(__FILE__)}/support/models.rb"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
