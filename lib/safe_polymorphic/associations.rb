@@ -49,7 +49,7 @@ module SafePolymorphic
         const_class = case klass
                       when String then klass
                       when Symbol then klass.to_s
-                      else type.class.name
+                      else klass.class.name
                       end
         const_class.classify.constantize
       end
@@ -63,12 +63,8 @@ module SafePolymorphic
       # Generates a generic finder method
       def define_generic_finder_method(name)
         define_singleton_method("with_#{name}") do |type|
-          type = case type
-                 when Class then type.name
-                 when String then type
-                 else type.class.name
-                 end
-          where("#{name}_type" => type)
+          type = constantize(type) unless type.is_a?(Class)
+          where("#{name}_type" => type.name)
         end
       end
 
