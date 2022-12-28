@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/1b0a4b92bbee2be50dc1/maintainability)](https://codeclimate.com/github/gogrow-dev/safe_polymorphic/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1b0a4b92bbee2be50dc1/test_coverage)](https://codeclimate.com/github/gogrow-dev/safe_polymorphic/test_coverage)
 
-An ActiveRecord extension which allows us to safely use polymorphic associations, by validating which classes are allowed to be related to, while also adding some helper methods.
+ActiveRecord extension which allows us to safely use polymorphic associations, by validating which classes are allowed to be related to, while also adding scopes and helper methods.
 
 The base idea was taken from this blogpost: [Improve ActiveRecord Polymorphic Associations - Head of engineering at Product Hunt](https://blog.rstankov.com/allowed-class-names-in-activerecord-polymorphic-associations/).
 
@@ -89,11 +89,11 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/safe_polymorphic. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/safe_polymorphic/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/gogrow-dev/safe_polymorphic. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/gogrow-dev/safe_polymorphic/blob/main/CODE_OF_CONDUCT.md).
 
 ## Code of Conduct
 
-Everyone interacting in the SafePolymorphic project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/safe_polymorphic/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the SafePolymorphic project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/gogrow-dev/safe_polymorphic/blob/main/CODE_OF_CONDUCT.md).
 
 ## Credits
 
