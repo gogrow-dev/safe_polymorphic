@@ -1,5 +1,5 @@
 # SafePolymorphic
-[![Gem Version](https://badge.fury.io/rb/safe_polymorphic.svg)](https://badge.fury.io/rb/safe_polymorphic)
+[![Gem Version](https://badge.fury.io/rb/safe_polymorphic.svg)](https://badge.fury.io/rb/safe_polymorphic.svg)
 [![Ruby](https://github.com/gogrow-dev/safe_polymorphic/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/gogrow-dev/safe_polymorphic/actions/workflows/main.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1b0a4b92bbee2be50dc1/maintainability)](https://codeclimate.com/github/gogrow-dev/safe_polymorphic/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1b0a4b92bbee2be50dc1/test_coverage)](https://codeclimate.com/github/gogrow-dev/safe_polymorphic/test_coverage)
@@ -97,7 +97,7 @@ Everyone interacting in the SafePolymorphic project's codebases, issue trackers,
 
 ## Credits
 
-belongs_to_polymorphic is maintained by [GoGrow](https://gogrow.dev) with the help of our
-[contributors](https://github.com/gogrow-dev/belongs_to_polymorphic/contributors).
+safe_polymorphic is maintained by [GoGrow](https://gogrow.dev) with the help of our
+[contributors](https://github.com/gogrow-dev/safe_polymorphic/contributors).
 
 [<img src="https://user-images.githubusercontent.com/9309458/180014465-00477428-fd76-48f6-b984-5b401b8ce241.svg" height="50"/>](https://gogrow.dev)
