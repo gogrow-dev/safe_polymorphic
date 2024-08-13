@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    safe_polymorphic (0.1.2)
-      activerecord (>= 5.2, < 7.1)
+    safe_polymorphic (0.1.3)
+      activerecord (>= 5.2, < 8.0)
 
 GEM
   remote: https://rubygems.org/
@@ -76,6 +76,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-23
   x86_64-linux
 
 DEPENDENCIES
