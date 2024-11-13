@@ -16,7 +16,7 @@ An ActiveRecord extension for polymorphic associations.
 * **Powerful.** It packages some helpful scopes and helper methods.
 
 <a href="https://gogrow.dev/?utm_source=github&utm_content=safe_polymorphic">
-<img src="https://www.gogrow.dev/_next/static/media/gogrow-logo.96254aba.svg" alt="Built by GoGrow" width="230"></a>
+<img src="./gogrow_logo.svg" alt="Built by GoGrow" width="230"></a>
 
 
 > Credits: [Improve ActiveRecord Polymorphic Associations](https://blog.rstankov.com/allowed-class-names-in-activerecord-polymorphic-associations/).
