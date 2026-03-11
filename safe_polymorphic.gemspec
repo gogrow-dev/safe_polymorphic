@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description = 'ActiveRecord extension which allows us to safely use polymorphic associations, by validating' \
    'which classes are allowed to be related to, while also adding scopes and helper methods.'
   spec.homepage = 'https://github.com/gogrow-dev/safe_polymorphic'
-  spec.required_ruby_version = '>= 2.6.0'
+  spec.required_ruby_version = '>= 3.2.0'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = spec.homepage
@@ -31,5 +31,5 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'activerecord', '>= 5.2', '< 8.0'
+  spec.add_dependency 'activerecord', '>= 7.0', '< 8.3'
 end
