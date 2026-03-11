@@ -1,7 +1,5 @@
 [![Gem Version](https://badge.fury.io/rb/safe_polymorphic.svg)](https://badge.fury.io/rb/safe_polymorphic.svg)
 [![Ruby](https://github.com/gogrow-dev/safe_polymorphic/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/gogrow-dev/safe_polymorphic/actions/workflows/main.yml)
-[![Maintainability](https://api.codeclimate.com/v1/badges/1b0a4b92bbee2be50dc1/maintainability)](https://codeclimate.com/github/gogrow-dev/safe_polymorphic/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/1b0a4b92bbee2be50dc1/test_coverage)](https://codeclimate.com/github/gogrow-dev/safe_polymorphic/test_coverage)
 
 # SafePolymorphic
 
