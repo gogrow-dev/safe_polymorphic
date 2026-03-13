@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+- Fix compatibility with Rails `delegated_type` by accepting optional `scope` parameter in `safe_polymorphic` method signature
+
 ## [0.1.0] - 2022-12-28
 
 - Initial release

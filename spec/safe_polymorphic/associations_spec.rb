@@ -205,4 +205,51 @@ RSpec.describe 'Safe Polymorphic Associations' do
       end
     end
   end
+
+  describe 'with delegated_type' do
+    it 'should work alongside delegated_type without errors' do
+      expect(Address).to respond_to(:addressable_types)
+      expect(Address.respond_to?(:with_addressable_user)).to be true
+      expect(Address.respond_to?(:with_addressable_publisher)).to be true
+    end
+
+    it 'should create an Address with a User addressable' do
+      user = User.first
+      address = Address.new(addressable: user)
+
+      expect(address.addressable_type).to eq('User')
+      expect(address.addressable).to eq(user)
+    end
+
+    it 'should create an Address with a Publisher addressable' do
+      publisher = Publisher.first
+      address = Address.new(addressable: publisher)
+
+      expect(address.addressable_type).to eq('Publisher')
+      expect(address.addressable).to eq(publisher)
+    end
+
+    it 'should have safe_polymorphic helper methods working' do
+      expect(Address.addressable_types).to match_array([User, Publisher])
+    end
+
+    it 'should reject invalid addressable types' do
+      other = OtherThing.create
+      address = Address.new(addressable: other)
+
+      expect(address).to_not be_valid
+      expect(address.errors[:addressable_type]).to include('OtherThing is not an allowed class')
+    end
+
+    it 'should provide scopes for safe_polymorphic' do
+      user = User.first
+      publisher = Publisher.first
+
+      Address.create(addressable: user)
+      Address.create(addressable: publisher)
+
+      expect(Address.with_addressable_user.count).to eq(1)
+      expect(Address.with_addressable_publisher.count).to eq(1)
+    end
+  end
 end

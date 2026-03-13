@@ -29,4 +29,26 @@ ActiveRecord::Schema.define do
 
     t.timestamps
   end
+
+  create_table :addresses, force: true do |t|
+    t.integer :addressable_id
+    t.string :addressable_type
+    t.string :type
+
+    t.timestamps
+  end
+
+  create_table :house_addresses, force: true do |t|
+    t.integer :address_id
+    t.string :style
+
+    t.timestamps
+  end
+
+  create_table :office_addresses, force: true do |t|
+    t.integer :address_id
+    t.integer :floors
+
+    t.timestamps
+  end
 end
