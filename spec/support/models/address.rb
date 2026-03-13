@@ -2,5 +2,5 @@
 
 class Address < ActiveRecord::Base
   belongs_to :addressable, polymorphic: [Publisher, User]
-  delegated_type :type, types: %w[House Office], dependent: :destroy
+  delegated_type :delegated, types: %w[Book], dependent: :destroy
 end

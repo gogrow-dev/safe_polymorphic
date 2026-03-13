@@ -207,6 +207,9 @@ RSpec.describe 'Safe Polymorphic Associations' do
   end
 
   describe 'with delegated_type' do
+    before do
+      Book.create(title: 'Book', owner: User.first)
+    end
     it 'should work alongside delegated_type without errors' do
       expect(Address).to respond_to(:addressable_types)
       expect(Address.respond_to?(:with_addressable_user)).to be true
@@ -215,7 +218,7 @@ RSpec.describe 'Safe Polymorphic Associations' do
 
     it 'should create an Address with a User addressable' do
       user = User.first
-      address = Address.new(addressable: user)
+      address = Address.new(addressable: user, delegated: Book.first)
 
       expect(address.addressable_type).to eq('User')
       expect(address.addressable).to eq(user)
@@ -223,7 +226,7 @@ RSpec.describe 'Safe Polymorphic Associations' do
 
     it 'should create an Address with a Publisher addressable' do
       publisher = Publisher.first
-      address = Address.new(addressable: publisher)
+      address = Address.new(addressable: publisher, delegated: Book.first)
 
       expect(address.addressable_type).to eq('Publisher')
       expect(address.addressable).to eq(publisher)
@@ -235,7 +238,7 @@ RSpec.describe 'Safe Polymorphic Associations' do
 
     it 'should reject invalid addressable types' do
       other = OtherThing.create
-      address = Address.new(addressable: other)
+      address = Address.new(addressable: other, delegated: Book.first)
 
       expect(address).to_not be_valid
       expect(address.errors[:addressable_type]).to include('OtherThing is not an allowed class')
@@ -245,11 +248,22 @@ RSpec.describe 'Safe Polymorphic Associations' do
       user = User.first
       publisher = Publisher.first
 
-      Address.create(addressable: user)
-      Address.create(addressable: publisher)
+      Address.create(addressable: user, delegated: Book.first)
+      Address.create(addressable: publisher, delegated: Book.first)
 
       expect(Address.with_addressable_user.count).to eq(1)
       expect(Address.with_addressable_publisher.count).to eq(1)
+    end
+
+    it 'should provide class methods of delegated_type ' do
+      user = User.first
+      book = Book.first
+
+      address = Address.create(addressable: user, delegated: book)
+
+      expect(Address.with_addressable_user.first).to eq(address)
+      expect(address.addressable).to eq(user)
+      expect(address.delegated).to eq(book)
     end
   end
 end

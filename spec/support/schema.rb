@@ -33,21 +33,8 @@ ActiveRecord::Schema.define do
   create_table :addresses, force: true do |t|
     t.integer :addressable_id
     t.string :addressable_type
-    t.string :type
-
-    t.timestamps
-  end
-
-  create_table :house_addresses, force: true do |t|
-    t.integer :address_id
-    t.string :style
-
-    t.timestamps
-  end
-
-  create_table :office_addresses, force: true do |t|
-    t.integer :address_id
-    t.integer :floors
+    t.bigint :delegated_id, null: false
+    t.string :delegated_type, null: false
 
     t.timestamps
   end
