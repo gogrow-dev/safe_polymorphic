@@ -11,8 +11,8 @@ module SafePolymorphic
     end
 
     module ClassMethods
-      def safe_polymorphic(name, **options)
-        unsafe_polymorphic name, **options
+      def safe_polymorphic(name, scope = nil, **options)
+        unsafe_polymorphic name, scope, **options
         polymorphic = options[:polymorphic]
 
         return unless polymorphic.present? && polymorphic.class != TrueClass

@@ -29,4 +29,13 @@ ActiveRecord::Schema.define do
 
     t.timestamps
   end
+
+  create_table :addresses, force: true do |t|
+    t.integer :addressable_id
+    t.string :addressable_type
+    t.bigint :delegated_id, null: false
+    t.string :delegated_type, null: false
+
+    t.timestamps
+  end
 end
