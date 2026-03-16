@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    safe_polymorphic (0.1.4)
+    safe_polymorphic (0.1.5)
       activerecord (>= 7.0, < 8.3)
 
 GEM
